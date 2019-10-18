@@ -37,6 +37,13 @@
 			<script src="assets/js/html5shiv.min.js"></script>
 			<script src="assets/js/respond.min.js"></script>
 		<![endif]-->
+    <style>
+    .higlight{
+        color:#39ff14;
+        font-weight:bold;
+ 
+        }
+    </style>
 
     <asp:ContentPlaceHolder ID="head" runat="server">
 
@@ -111,7 +118,49 @@
 				
             </div>
 			<!-- /Header -->
-			
+			   <div class="sidebar" id="sidebar">
+                <div class="sidebar-inner slimscroll">
+					<div id="sidebar-menu" class="sidebar-menu">
+						<ul>
+							<li class="menu-title"> 
+								<span class="higlight">Assign</span> <!--class="active"-->
+							</li>
+							<li class="submenu">
+								<a href="#" id="dashboard" runat="server"><i class="fas fa-dashboard"></i> <span> Roles</span> <i class="fas fa-caret-right menu-arrow"></i></a>
+								<ul style="display: none;">
+									<li><a id="adminreg" runat="server" href="index.aspx">Admin Registration</a></li>
+									<li><a id="adminInfo" runat="server" href="AdminInfo.aspx">Admins Info & settings</a></li>
+                                    <li><a id="volreg" runat="server"  href="Volunteer.aspx">Volunteer Registration</a></li>
+								</ul>
+							</li>
+						
+							<li class="menu-title"> 
+								<span class="higlight">Volunteer Data</span>
+							</li>
+							<li class="submenu">
+								<a href="#" id="voldata" runat="server" ><i class="fas fa-user"></i> <span> Volunteers</span> <i class="fas fa-caret-right menu-arrow"></i></a>
+								<ul style="display: none;">
+									<li><a id="allvol" runat="server" href="AllVolunteer.aspx">All Volunteer</a></li>
+									<li><a id="regvol" runat="server" href="Registraion.aspx">Registration Team</a></li>
+									<li><a id="secvol" runat="server" href="Security.aspx">Security Team</a></li>
+								</ul>
+							</li>
+							<li class="menu-title"> 
+								<span class="higlight">Customer</span>       <!-- <i class="fas fa-users"></i> -->
+							</li>
+							<li class="submenu">
+								<a href="#" id="customers" runat="server"><i class="fas fa-info"></i> <span> Customer Info</span> <i class="fas fa-caret-right menu-arrow"></i></a>
+								<ul style="display: none;">
+									<li><a id="regonday" runat="server" href="DayReg.aspx">Registration on day</a></li>
+									<li><a id="custsrc" runat="server" href="customersearch.aspx">Search Customer</a></li>
+									<li><a id="custdetails" runat="server" href="Total.aspx">Details</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+                </div>
+            </div>
+			<!-- /Sidebar -->
 		
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">

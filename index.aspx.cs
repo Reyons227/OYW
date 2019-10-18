@@ -10,8 +10,19 @@ namespace OYW19
     public partial class index : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
+        
         {
-
+          
+            if (Session["id"] == null)
+            {
+                Response.Redirect("/login.aspx");
+            }
+        
+           if (User.IsInRole("Guest"))
+            {
+                ClientScript.RegisterStartupScript(Page.GetType(), "validation", "<script language='javascript'>alert('Page Not Found')</script>");
+            }
+         
         }
     }
 }
